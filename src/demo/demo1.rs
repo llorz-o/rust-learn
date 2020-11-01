@@ -2,8 +2,11 @@ use rand::Rng;
 use std::cmp::Ordering;
 use std::io; // 引入模块
 use std::io::copy; // 也可已引入方法
+                   // use std::{cmp::Ordering, io}; // 同一模块中的不同子模块可显著减少引入语句
+                   // use std::io::{self,Write}; // self 指向 io 模块
+use std::collections::*; // 引入模块下所有公共项
 
-fn main() {
+pub fn run() {
     println!("猜测这个数值");
 
     // 接下来在 Cargo.toml 中添加 rand 包,使用 cargo build 来安装该包

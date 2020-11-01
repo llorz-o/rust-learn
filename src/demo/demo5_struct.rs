@@ -1,4 +1,4 @@
-fn main() {
+pub fn run() {
     // 结构体的实例
     let mut user = User {
         username: String::from("jojo"),

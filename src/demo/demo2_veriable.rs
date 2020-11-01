@@ -1,4 +1,4 @@
-fn main() {
+pub fn run() {
     // 声明
     let a;
     // let 声明的不可变变量仅可初始化一次;
@@ -76,5 +76,3 @@ fn main() {
 fn another_function(x: i32, y: i32) -> i32 {
     x + y
 }
-
-

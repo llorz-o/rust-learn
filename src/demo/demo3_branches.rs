@@ -1,4 +1,4 @@
-fn main() {
+pub fn run() {
     // 在rust中if判断只能使用 bool 值
     if true {
         println!("true");
