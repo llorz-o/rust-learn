@@ -6,6 +6,7 @@ enum List {
 }
 
 impl List {
+    
     fn new() -> List {
         Nil
     }
