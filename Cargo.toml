@@ -8,6 +8,7 @@ edition = "2018"
 
 [dependencies]
 rand = "0.7"
+hello_macro_derive={path = "./hello_macro_derive"}
 
 [profile.release]
 # abort 意为直接退出而不清理内存
