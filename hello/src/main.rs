@@ -157,7 +157,7 @@ fn main() {
     let listener = TcpListener::bind("127.0.0.1:7878").unwrap();
     println!("Listening for connections on port {}", 7878);
 
-    let thread_pool = ThreadPool::new(10);
+    let thread_pool = ThreadPool::new(100);
 
     for stream in listener.incoming() {
         match stream {

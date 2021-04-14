@@ -13,3 +13,13 @@ hello_macro_derive={path = "./hello_macro_derive"}
 [profile.release]
 # abort 意为直接退出而不清理内存
 panic = 'abort'
+
+[workspace]
+members = [
+    "about_net",
+    "hello",
+    "db",
+    "json_data",
+    "restaurant",
+    "module"
+]
