@@ -11,6 +11,7 @@
       <sourceFolder url="file://$MODULE_DIR$/module/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/restaurant/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/learn_tokio/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/hello/target" />
     </content>

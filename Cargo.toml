@@ -21,5 +21,6 @@ members = [
     "db",
     "json_data",
     "restaurant",
-    "module"
+    "module",
+    "learn_tokio"
 ]
