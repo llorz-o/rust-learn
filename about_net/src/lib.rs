@@ -381,6 +381,7 @@ pub mod pnet_demo {
                     if let Some(ipv4_packet) = Ipv4Packet::new(packet) {
                         match ipv4_packet.get_next_level_protocol() {
                             IpNextHeaderProtocols::Tcp => {
+                                println!("Tcp");
                                 if let Some(tcp_packet) = TcpPacket::new(packet) {
                                     println!("Tcp packet {} : {} to {} : {}",
                                              ipv4_packet.get_source(),
@@ -390,11 +391,29 @@ pub mod pnet_demo {
                                     );
                                 }
                             }
-                            protocol => println!("ignoring ip next level protocol: {}",protocol)
+                            IpNextHeaderProtocols::PrivEncryption => {
+                                println!("PrivEncryption packet source {}  destination {}",
+                                         ipv4_packet.get_source(),
+                                         ipv4_packet.get_destination(),
+                                );
+                            }
+                            protocol => {
+                                println!("ignoring ip next level protocol: {} packet source {}  destination {}",
+                                         protocol,
+                                         ipv4_packet.get_source(),
+                                         ipv4_packet.get_destination(),
+                                );
+                            }
                         }
                     }
                 }
-                proto => println!("ignoring ethernet type:{}",proto)
+                proto => {
+                    println!("ethernet type:{} packet source:{} destination:{}",
+                             proto,
+                             ether.get_source(),
+                             ether.get_destination()
+                    );
+                }
             }
         }
     }
